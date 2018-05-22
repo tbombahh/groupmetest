@@ -1,8 +1,7 @@
 {
-  "name": "Node.js Getting Started",
-  "description": "Basic Groupme Bot written in Node",
-  "repository": "",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"],
-  "image": "heroku/nodejs"
+  "name": "GroupMeBot",
+  "description": "A Simple Bot with Giphy Integration, APIAI Integration, Giphy Integration, Search integration, and Some Random Face Integration. ",
+  "repository": "https://github.com/iconjone/GroupMeBot",
+  "logo": "http://jonathansamuel.tk/logo.png",
+  "keywords": []
 }

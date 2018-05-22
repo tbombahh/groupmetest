@@ -1,7 +1,8 @@
-var http, director, bot, router, server, port;
+var http, director, cool, bot, router, server, port;
 
 http        = require('http');
 director    = require('director');
+cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
 router = new director.http.Router({
@@ -14,7 +15,6 @@ router = new director.http.Router({
 server = http.createServer(function (req, res) {
   req.chunks = [];
   req.on('data', function (chunk) {
-    console.log(chunk.toString());
     req.chunks.push(chunk.toString());
   });
 
@@ -29,5 +29,5 @@ server.listen(port);
 
 function ping() {
   this.res.writeHead(200);
-  this.res.end("Hey, I'm Cool Guy.");
+  this.res.end("Hey, I'm that bot.");
 }
