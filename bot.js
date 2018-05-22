@@ -1,11 +1,9 @@
 var HTTPS = require('https');
 var HTTP = require('http');
-var cool2 = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 var apiKey = process.env.API_KEY;
 
-##giphy code
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       giphyCommand = '/giphy';
@@ -53,27 +51,10 @@ function encodeQuery(query) {
   return query.replace(/\s/g, '+');;
 }
 
-
-## Original
-/* function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guyy$/;
-
-  if(request.text && botRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-}
-*/
-function postMessage() {
+function postMessage(message) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool2();
+  botResponse = message;
 
   options = {
     hostname: 'api.groupme.com',
@@ -90,9 +71,9 @@ function postMessage() {
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
-        //neat
+        console.log('202 response');
       } else {
-        console.log('rejecting bad status code ' + res.statusCode);
+        console.log('rejecting bad status code from groupme:' + res.statusCode);
       }
   });
 
@@ -104,6 +85,5 @@ function postMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
-
 
 exports.respond = respond;
