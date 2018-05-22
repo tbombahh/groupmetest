@@ -23,7 +23,7 @@ function respond() {
 function searchGiphy(giphyToSearch) {
   var options = {
     host: 'api.giphy.com',
-    path: '/v1/gifs/search?q=' + encodeQuery(giphyToSearch) + '&api_key=' + apiKey
+    path: '/v1/gifs/search?q=' + encodeQuery(giphyToSearch) + '&api_key=' + apiKey + '&rating=r'
   };
 
   var callback = function(response) {
