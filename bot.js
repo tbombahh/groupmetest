@@ -115,7 +115,7 @@ if(aires)
   }    
 	  else if(request.text && pokemon.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "You want to play Pokemon, ehh?  Here's how to play:  Challenge a fellow trainer with an awesome intro in style of the Red, Blue, and Yellow games.  Then type '/g pokemon' to summon your Pokemon Fighter.  The person you challenge will do the same.  Rules are: Pokemon status is taken from the image (ie asleep, confused, normal).  Type/Element strengths and weaknesses apply.  Good luck!" 
+          var botResponse = "You want to play Pokemon, ehh?  Here's how to play:  Challenge a fellow trainer with an awesome intro in style of the Red, Blue, and Yellow games.  Then type '/g pokemon' to summon your Pokemon Fighter.  The person you challenge will do the same.  Rules are: Pokemon status is taken from the image (ie asleep, confused, normal).  Type/Element strengths and weaknesses apply.  If there is more than 1 Pokemon in the image, the one closest, to the middle wins.  We will do a quick vote if there is confusion.  Good luck!" 
           postMessage(botResponse);
           this.res.end();
   }    else { console.log("don't care");
