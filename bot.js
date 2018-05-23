@@ -160,7 +160,7 @@ var options={
   {
   giphy.translate({
       s: query,
-      rating: 'g',
+      //rating: 'g',
       fmt: 'json'
   }, function(err, res) {
       // Res contains gif data!
