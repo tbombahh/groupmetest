@@ -65,11 +65,11 @@ var webres = webfind.test(str);
     }
 //End of fallbacks
 //Checks for and initates Gif
-if(gifres && request.name != botName && !(webres))
-{
-    var query = str.substr(3);
-    getGif(query);
-}
+//if(gifres && request.name != botName && !(webres))
+//{
+//  var query = str.substr(3);
+//  getGif(query);
+//}
 //Checks for and initates Search
 if(searchres && request.name != botName && !(webres))
 {
