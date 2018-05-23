@@ -108,7 +108,7 @@ if(aires)
             this.res.end();
     }   else if(request.text && help.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "So you want to know how to use this? Look no further... If you want to trigger the AI type Ai or ai and whatever you want(Ai what is 24 + 18), try a slash and triggered, cool guy, or chill for special features...(/triggered, /cool guy, /chill) For a special person, they can type " + specialMessage + " of any sort and it will post a GIF, a slash followed by g and a search term will return a gif(/g puppies), and a slash followed by search and a search term will return a Link(/search How to bake a cake)."
+          var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try tpying this: '/g btiches' and see what I'll see what I can do for ya! 
           postMessage(botResponse);
           this.res.end();
   }    else { console.log("don't care");
