@@ -97,11 +97,11 @@ if(aires)
       var botResponse = "https://i.groupme.com/500x281.gif.9aa0ae471663485c962fdf04fe4dffdc.large";
       postMessage(botResponse);
       this.res.end();
-  } else if(msgres && request.name == nameTarget) {
-        this.res.writeHead(200);
-        var botResponse = "https://i.groupme.com/500x307.gif.38bd79c0db38415cba0333c1120fbff3.large";
-        postMessage(botResponse);
-        this.res.end();
+//  } else if(msgres && request.name == nameTarget) {
+//        this.res.writeHead(200);
+//        var botResponse = "https://i.groupme.com/500x307.gif.38bd79c0db38415cba0333c1120fbff3.large";
+//        postMessage(botResponse);
+//        this.res.end();
       } else if(chillres && (request.name != botName)) {
             this.res.writeHead(200);
             var botResponse = "https://i.groupme.com/245x292.gif.ca41bed2aaef478b886e0660730c80b2.large";
