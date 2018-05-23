@@ -15,6 +15,7 @@ function respond() {
       botRegex = /^\/cool guy$/;
       triggered = /^\/triggered$/;
       help = /^\/help$/;
+      pokemon = /^\/pokemon$/;
 
 var str = request.text;
 // string and removes spaces and repeating
@@ -109,6 +110,12 @@ if(aires)
     }   else if(request.text && help.test(request.text)) {
           this.res.writeHead(200);
           var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try tpying this: '/g btiches' and see what I'll see what I can do for ya!" 
+          postMessage(botResponse);
+          this.res.end();
+  }    
+	  else if(request.text && pokemon.test(request.text)) {
+          this.res.writeHead(200);
+          var botResponse = "You want to play Pokemon, ehh?  Here's how to play:  Challenge a fellow trainer with an awesome intro in style of the Red, Blue, and Yellow games.  Then type '/g pokemon' to summon your Pokemon Fighter.  The person you challenge will do the same.  Rules are: Pokemon status is taken from the image (ie asleep, confused, normal).  Type/Element strengths and weaknesses apply.  Good luck!" 
           postMessage(botResponse);
           this.res.end();
   }    else { console.log("don't care");
