@@ -108,7 +108,7 @@ if(aires)
             this.res.end();
     }   else if(request.text && help.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try tpying this: '/g btiches' and see what I'll see what I can do for ya! 
+          var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try tpying this: '/g btiches' and see what I'll see what I can do for ya!" 
           postMessage(botResponse);
           this.res.end();
   }    else { console.log("don't care");
