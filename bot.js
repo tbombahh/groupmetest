@@ -18,7 +18,7 @@ function respond()
 	botRegex = /^\/cool guy$/;
 	triggered = /^\/triggered$/;
 	help = /^\/help$/;
-	meball = /^\/8/;
+	meball = /^\/8ball/;
 	yn = /^\/yn/;
 	about = /^\/about$/;
 
