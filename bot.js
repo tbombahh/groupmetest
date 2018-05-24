@@ -16,7 +16,7 @@ function respond() {
       botRegex = /^\/cool guy$/;
       triggered = /^\/triggered$/;
       help = /^\/help$/;
-      flip = /^\/flip$/ + var str;
+      flip = /^\"/flip"$/;
       yn = /^\/yn$/;
 
 var str = request.text;
