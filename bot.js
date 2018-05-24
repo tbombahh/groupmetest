@@ -15,7 +15,7 @@ function respond() {
       botRegex = /^\/cool guy$/;
       triggered = /^\/triggered$/;
       help = /^\/help$/;
-      pokemon = /^\/pokemon$/;
+      flip = /^\/flip$/;
       yn = /^\/yn$/;
 
 var str = request.text;
@@ -114,9 +114,9 @@ if(aires)
           postMessage(botResponse);
           this.res.end();
   }    
-        else if(request.text && pokemon.test(request.text)) {
+        else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "You want to play Pokemon, ehh?  Here's how to play:  Challenge a fellow trainer with an awesome intro in style of the Red, Blue, and Yellow games.  Then type '/g pokemon' to summon your Pokemon Fighter.  The person you challenge will do the same.  Rules are: Pokemon status is taken from the image (ie asleep, confused, etc.).  Type/Element strengths and weaknesses apply.  If there is more than 1 Pokemon in the image the main focus of the image is your choice.  You can redo if there is no clear Pokemon as the main focus of the image.   We will do a quick vote if there is confusion.  Good luck!" 
+          var botResponse = "FLIPPING A COIN! You want to play Pokemon, ehh?  Here's how to play:  Challenge a fellow trainer with an awesome intro in style of the Red, Blue, and Yellow games.  Then type '/g pokemon' to summon your Pokemon Fighter.  The person you challenge will do the same.  Rules are: Pokemon status is taken from the image (ie asleep, confused, etc.).  Type/Element strengths and weaknesses apply.  If there is more than 1 Pokemon in the image the main focus of the image is your choice.  You can redo if there is no clear Pokemon as the main focus of the image.   We will do a quick vote if there is confusion.  Good luck!" 
           postMessage(botResponse);
           this.res.end();
   }	  
