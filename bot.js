@@ -70,14 +70,14 @@ Fallbacks
         }
     }
 //Checks for Coin Flip
-  if(!(chillres))
+  if(!(coinflipres))
     {
-      chillfind = new RegExp("/flip");
-      var chillres = chillfind.test(str);
-      if(!(chillres))
+      coinflipfind = new RegExp("/flip");
+      var coinflipres = coinflipfind.test(str);
+      if(!(coinflipres))
         {
-          chillfind = new RegExp("/CHILL");
-          var chillres = chillfind.test(str);
+          coinflipfind = new RegExp("/FLIP");
+          var coinflipres = coinflipfind.test(str);
         }
     }
 //End of fallbacks
