@@ -20,6 +20,7 @@ function respond()
 	help = /^\/help$/;
 	meball = /^\/8/;
 	yn = /^\/yn/;
+	about = /^\/about$/;
 
 	var str = request.text;
 	// string and removes spaces and repeating
@@ -121,12 +122,17 @@ function respond()
 		this.res.end();
 	} else if(request.text && help.test(request.text)) {
 		this.res.writeHead(200);
-		var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do: \n \n" + 
+		var botResponse = "Here's what I can do: \n \n" + 
 		    "1. I'm a Meme Finder.  Type '/g' before your search term and I'll return a related .gif from the internet! \n \n" +
 		    "2. I'm a Yes/No-er.  Type '/yn' before your search term and I'll return a Yes or No to your question! \n \n" +
 		    "3. I'm a Coin Flipper.  Type '/flip' to flip a coin! \n \n" +
 		    "4. I'm a Magic 8 Ball.  Type '/8' to get your fortune! \n \n" +
 		    "Let Me know if there is anything else you want me to do :)"
+		postMessage(botResponse);
+		this.res.end();
+	} else if(request.text && about.test(request.text)) {
+		this.res.writeHead(200);
+		var botResponse = "I've been created by Taylor with the help of the GitHub community.  I am version 3.0 and the last time I was update was on 5/24/18.  My new features are coin fli, 8ball, and yes/no."
 		postMessage(botResponse);
 		this.res.end();
 	} else if(request.text && meball.test(request.text)) {
