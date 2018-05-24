@@ -28,10 +28,6 @@ var msgfind = new RegExp(specialMessage);
 var msgres = msgfind.test(norstr);
 var chillfind = new RegExp("/chill");
 var chillres = chillfind.test(str);
-	//coin flip test
-var coinflipfind = new RegExp("/flip");
-var coinflipres = chillfind.test(str);
-	// end coin flip test
 var aifind = new RegExp("ai");
 var aires = aifind.test(str);
 var giffind = new RegExp("/g");
@@ -69,17 +65,7 @@ Fallbacks
           var chillres = chillfind.test(str);
         }
     }
-//Checks for Coin Flip
-  if(!(coinflipres))
-    {
-     chillfind = new RegExp("/Chill");
-      var chillres = chillfind.test(str);
-      if(!(chillres))
-        {
-          chillfind = new RegExp("/CHILL");
-          var chillres = chillfind.test(str);
-        }
-    }
+
 //End of fallbacks
 //Checks for and initates Gif
 if(gifres && request.name != botName && !(webres))
@@ -130,7 +116,7 @@ if(aires)
           postMessage(botResponse);
           this.res.end();
   }    
-    /*    else if(request.text && flip.test(request.text)) {
+          else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var theflip = 'Default Message';
@@ -188,7 +174,7 @@ if(aires)
           var botResponse = theflip;
           postMessage(botResponse);
           this.res.end();
-  }	  */
+  }	  
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.random();
