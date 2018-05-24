@@ -143,7 +143,7 @@ function respond()
 		if (r < 100 && r > 95) {
 			magic = 'It is certain';
 		} else if (r < 96 && r > 91){
-			magic = 'Reply hazy, try again';
+			magic = "I have no clue and I would say ask the 9 ball, but 7 8 9";
 		} else if (r < 92 && r > 87){
 			magic = 'Ask again later';
 		} else if (r < 88 && r > 83){
@@ -181,7 +181,7 @@ function respond()
 		} else if (r < 24 && r > 19){
 			magic = 'Concentrate harder and ask again';
 		} else if (r < 20 && r > 15){
-			magic = 'YEAH BABY!';
+			magic = "Here's my Austin Power's impression: hehe yeah... YEAH BABY! yeah';
 		} else if (r < 16 && r > 11){
 			magic = 'That adds no substance to the conversation';
 		} else if (r < 12 && r > 7){
