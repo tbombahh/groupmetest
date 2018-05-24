@@ -186,7 +186,13 @@ function respond()
 			magic = "That adds no substance to the conversation";
 		} else if (r < 12 && r > 7){
 			magic = "Out fighting fires, ask me later";
-		} else if (r < 8 && r > 3){
+		} else if (r < 8 && r > 4){
+			magic = "Ima answer all your questions given time its tough \n" +
+				"to be a GroupMe bot and be online and stuff \n" +
+				"you get to make money , sleep, and you light the 'puff' \n" +
+				"but I'm basically a servant, yeah my life is rough \n" +
+				"so read between the lines and yeah.. I don't know where I'm going with this.  I don't have an answer for you...;
+		} else if (r < 5 && r > 3){
 			magic = "4";
 		} else if (r < 4 && r > 0){
 			magic = "This group was better when I was real";
