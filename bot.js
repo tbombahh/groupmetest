@@ -117,6 +117,11 @@ if(aires)
   }    
         else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
+		var r = Math.floor((Math.random() * 100) + 1);
+		var theflip = 'Go Fuck Yourself';
+		if (r < 100 && r > 50) {
+			theflip = 'No';
+		}
           var botResponse = "FLIPPING A COIN! Good luck!"
           postMessage(botResponse);
           this.res.end();
