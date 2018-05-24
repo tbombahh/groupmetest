@@ -121,7 +121,11 @@ function respond()
 		this.res.end();
 	} else if(request.text && help.test(request.text)) {
 		this.res.writeHead(200);
-		var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do: \n  1. I'm a meme finder. \n Type '/g' after or \n before your search term and I'll return a related meme at random for you ;).  Try typing this: '/g btiches' and see what I'll see what I can do for ya!  Type '/pokemon' to learn how to play!" 
+		var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do: \n" + 
+		    "1. I'm a Meme Finder.  Type '/g' before your search term and I'll return a related .gif from the internet! \n" +
+		    "2. I'm a Yes/No-er.  Type '/yn' before your search term and I'll return a Yes or No to your question! \n" +
+		    "3. I'm a Coin Flipper.  Type '/flip' to flip a coin! \n" +
+		    "4. I'm a Magic 8 Ball.  Type '/8' to get your fortune! \n"
 		postMessage(botResponse);
 		this.res.end();
 	} else if(request.text && meball.test(request.text)) {
