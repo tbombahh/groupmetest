@@ -123,7 +123,7 @@ if(aires)
   }	  
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
-		//var r = Math.random();
+		var r = 1;
 		var theflip = 'heads';
 		//if (r < 0.5) {
 			//theflip = 'tails';
