@@ -20,7 +20,7 @@ function respond()
 	help = /^\/help$/;
 	meball = /^\/8/;
 	yn = /^\/yn/;
-	flip = /^\/flip$/;
+	flip = /^\flip$/;
 	about = /^\/about$/;
 
 	var str = request.text;
@@ -143,8 +143,9 @@ function respond()
 	} 
 	  //Magic 8 Ball Code
 	  else if(request.text && meball.test(request.text)) {
-		  
+		  this.res.writeHead(200);
 		  eightBall();
+		  this.res.end();
 					
 	} 
 	  //Yes or No Answer Section
@@ -300,7 +301,6 @@ function postMessage(botResponse)
 
 function eightBall()
 {
-	this.res.writeHead(200);
 	var r = Math.floor((Math.random() * 100) + 1);
 	var magic = "You can ask all you want.  It doesn't mean I'll answer";
 					
@@ -363,7 +363,6 @@ function eightBall()
 	} 
 	var botResponse = magic;
 	postMessage(botResponse);
-	this.res.end();
 }
 
 exports.respond = respond;
