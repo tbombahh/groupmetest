@@ -122,7 +122,7 @@ if(aires)
 		if (r < 100 && r > 50) {
 			theflip = 'No';
 		}
-          var botResponse = "FLIPPING A COIN! Good luck!"
+          var botResponse = theflip;
           postMessage(botResponse);
           this.res.end();
   }	  
