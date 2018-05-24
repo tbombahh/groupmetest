@@ -115,7 +115,7 @@ if(aires)
           postMessage(botResponse);
           this.res.end();
   }    
-        else if(request.text && flip.test(request.text)) {
+        else if(request.text && flip.test(request.text) + str) {
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var theflip = 'Go Fuck Yourself';
