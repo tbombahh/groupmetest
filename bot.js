@@ -155,6 +155,19 @@ var options={
         console.log('Error: ' +e);
     });
   }
+
+//**************************************************************************
+//Flips coin
+function flipcoin() {
+
+  var r = Math.random();
+  var botResponse = 'heads';
+  if (r < 0.5) {
+    botResponse = 'tails';
+    postMessage(botResponse);  
+}
+//*************************************************************************
+
   //Sends to Giphy to get Gif
   function getGif(query)
   {
