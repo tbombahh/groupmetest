@@ -141,55 +141,55 @@ function respond()
 		var magic = "You can ask all you want.  It doesn't mean I'll answer";
 						
 		if (r < 100 && r > 95) {
-			magic = 'It is certain';
+			magic = '"It is certain";
 		} else if (r < 96 && r > 91){
 			magic = "I have no clue and I would say ask the 9 ball, but 7 8 9";
 		} else if (r < 92 && r > 87){
-			magic = 'Ask again later';
+			magic = "Ask again later";
 		} else if (r < 88 && r > 83){
 			magic = "Don't count on it";
 		} else if (r < 84 && r > 79){
-			magic = 'The stars say no';
+			magic = "The stars say no";
 		} else if (r < 80 && r > 75){
-			magic = 'You can count on it';
+			magic = "You can count on it";
 		} else if (r < 76 && r > 71){
 			magic = "I'd rather not say...";
 		} else if (r < 72 && r > 67){
-			magic = 'Doubtful';
+			magic = "Doubtful";
 		} else if (r < 68 && r > 63){
-			magic = 'Try asking in a different way';
+			magic = "Try asking in a different way";
 		} else if (r < 64 && r > 59){
 			magic = "That's a dumb question";
 		} else if (r < 60 && r > 55){
 			magic = "If you have to ask, you'll never know";
 		} else if (r < 56 && r > 51){
-			magic = 'Outlook not so good';
+			magic = "Outlook not so good";
 		}  else if (r < 52 && r > 47){
-			magic = 'Chances are slim';
+			magic = "Chances are slim";
 		} else if (r < 48 && r > 43){
-			magic = 'Most likely';
+			magic = "Most likely";
 		} else if (r < 44 && r > 39){
-			magic = 'Definitely';
+			magic = "Definitely";
 		} else if (r < 40 && r > 35){
 			magic = "Not going to say 'yes' but it's looking like it";
 		} else if (r < 36 && r > 31){
 			magic = "Not going to say 'no' but it's looking like it";
 		} else if (r < 32 && r > 27){
-			magic = 'Probably';
+			magic = "Probably";
 		} else if (r < 28 && r > 23){
-			magic = 'Probably not';
+			magic = "Probably not";
 		} else if (r < 24 && r > 19){
-			magic = 'Concentrate harder and ask again';
+			magic = "Concentrate harder and ask again";
 		} else if (r < 20 && r > 15){
-			magic = "Here's my Austin Power's impression: hehe yeah... YEAH BABY! yeah';
+			magic = "Here's my Austin Power's impression: hehe yeah... YEAH BABY! yeah";
 		} else if (r < 16 && r > 11){
-			magic = 'That adds no substance to the conversation';
+			magic = "That adds no substance to the conversation";
 		} else if (r < 12 && r > 7){
-			magic = 'Out fighting fires, ask me later';
+			magic = "Out fighting fires, ask me later";
 		} else if (r < 8 && r > 3){
-			magic = '4';
+			magic = "4";
 		} else if (r < 4 && r > 0){
-			magic = 'This group was better when I was real';
+			magic = "This group was better when I was real";
 		} 
 		var botResponse = magic;
 		postMessage(botResponse);
