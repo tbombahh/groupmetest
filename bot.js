@@ -121,6 +121,8 @@ if(aires)
 		var theflip = 'Go Fuck Yourself';
 		if (r < 100 && r > 50) {
 			theflip = 'No';
+		} else if (r < 50 && r > 35){
+			theflip = 'maybe';
 		}
           var botResponse = theflip;
           postMessage(botResponse);
