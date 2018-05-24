@@ -124,9 +124,7 @@ if(aires)
           this.res.writeHead(200);
           var botResponse = "coin was flipped!" 
           postMessage(botResponse);
-          this.res.end();
-  }     
-		  
+          this.res.end();	  
 		  
   }    else { console.log("don't care");
     this.res.writeHead(200);
