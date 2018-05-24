@@ -30,7 +30,7 @@ var chillfind = new RegExp("/chill");
 var chillres = chillfind.test(str);
 	//coin flip test
 var coinflipfind = new RegExp("/flip");
-var coinflipres = coinflipfind.test(str);
+var coinflipres = chillfind.test(str);
 	// end coin flip test
 var aifind = new RegExp("ai");
 var aires = aifind.test(str);
@@ -61,23 +61,23 @@ Fallbacks
   //Checks all the Chills
   if(!(chillres))
     {
-      chillfind = new RegExp("/Chill");
+      chillfind = new RegExp("/flip");
       var chillres = chillfind.test(str);
       if(!(chillres))
         {
-          chillfind = new RegExp("/CHILL");
+          chillfind = new RegExp("/FLIP");
           var chillres = chillfind.test(str);
         }
     }
 //Checks for Coin Flip
   if(!(coinflipres))
     {
-      coinflipfind = new RegExp("/flip");
-      var coinflipres = coinflipfind.test(str);
-      if(!(coinflipres))
+     chillfind = new RegExp("/Chill");
+      var chillres = chillfind.test(str);
+      if(!(chillres))
         {
-          coinflipfind = new RegExp("/FLIP");
-          var coinflipres = coinflipfind.test(str);
+          chillfind = new RegExp("/CHILL");
+          var chillres = chillfind.test(str);
         }
     }
 //End of fallbacks
