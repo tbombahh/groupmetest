@@ -125,9 +125,9 @@ if(aires)
           this.res.writeHead(200);
 		var r = 1;
 		var theflip = 'heads';
-		//if (r < 0.5) {
-			//theflip = 'tails';
-		//}
+		if (r < 0.5) {
+			theflip = 'tails';
+		}
           var botResponse = theflip ;
           postMessage(botResponse);
           this.res.end();	
