@@ -19,7 +19,7 @@ function respond()
 	triggered = /^\/triggered$/;
 	help = /^\/help$/;
 	flip = /^\/flip$/;
-	yn = /^\/yn$/;
+	yn = /^\/yn/;
 
 	var str = request.text;
 	// string and removes spaces and repeating
