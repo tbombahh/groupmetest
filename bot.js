@@ -164,13 +164,7 @@ function respond()
 	  //Coin Flip Section
 	  else if(request.text && flip.test(request.text)) {
 		this.res.writeHead(200);
-		var r = Math.random();
-		var theflip = 'Heads';
-		if (r < 0.5) {
-			theflip = 'Tails';
-		}
-		var botResponse = theflip ;
-		postMessage(botResponse);
+		coinFlipper();
 		this.res.end();	
 	
 	} else {
@@ -269,7 +263,7 @@ function search(query)
 	});
 }
 
-//Magic 8Ball Code
+//Play with Magic 8Ball
 function eightBall()
 {
 	var r = Math.floor((Math.random() * 100) + 1);
@@ -334,6 +328,18 @@ function eightBall()
 	} 
 	var botResponse = magic;
 	postMessage(botResponse);
+}
+
+//Play with Coin Flipper
+function coinFlipper()
+{
+	var r = Math.random();
+		var theflip = 'Heads';
+		if (r < 0.5) {
+			theflip = 'Tails';
+		}
+		var botResponse = theflip ;
+		postMessage(botResponse);
 }
 
 
