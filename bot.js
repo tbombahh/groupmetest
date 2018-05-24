@@ -167,7 +167,7 @@ var options={
   }
 
 //**************************************************************************
-//Flips coin
+/*Flips coin
 function flipcoin() {
 
   var r = Math.random();
@@ -176,6 +176,7 @@ function flipcoin() {
     botResponse = 'tails';
     postMessage(botResponse);  
 }
+*/
 //*************************************************************************
 
   //Sends to Giphy to get Gif
