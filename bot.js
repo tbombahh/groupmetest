@@ -85,7 +85,7 @@ function respond()
 	if(searchres && request.name != botName && !(webres))
 	{
 		var query = str.substr(8);
-		if(googleID != undefined)
+		if(googleID != 'AIzaSyCKDiariOtWalhK4Qet46cIYi-StbMODWM')
 			search(query);
 	}
 
