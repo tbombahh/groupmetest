@@ -124,9 +124,9 @@ if(aires)
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.random();
-		var theflip = 'heads';
+		var theflip = 'Yes';
 		if (r < 0.5) {
-			theflip = 'tails';
+			theflip = 'No';
 		}
           var botResponse = theflip ;
           postMessage(botResponse);
