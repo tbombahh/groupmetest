@@ -7,10 +7,10 @@ var botID = process.env.BOT_ID;
 var botName = process.env.BOT_NAME;
 var nameTarget = process.env.NAME_TARGET;
 var specialMessage = process.env.SPECIAL_MESSAGE;
-//var aiClient = process.env.AI_CLIENT;
-//var aiDeveloper = process.env.AI_DEVELOPER;
-//var googleKey = process.env.GOOGLE_KEY;
-//var googleID = process.env.GOOGLE_ID;
+var aiClient = process.env.AI_CLIENT;
+var aiDeveloper = process.env.AI_DEVELOPER;
+var googleKey = process.env.GOOGLE_KEY;
+var googleID = process.env.GOOGLE_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
@@ -28,36 +28,51 @@ var msgfind = new RegExp(specialMessage);
 var msgres = msgfind.test(norstr);
 var chillfind = new RegExp("/chill");
 var chillres = chillfind.test(str);
-//var aifind = new RegExp("ai");
-//var aires = aifind.test(str);
+	//coin flip test
+var coinflipfind = new RegExp("/flip");
+var coinflipres = coinflipfind.test(str);
+	// end coin flip test
+var aifind = new RegExp("ai");
+var aires = aifind.test(str);
 var giffind = new RegExp("/g");
 var gifres = giffind.test(str);
-//var searchfind = new RegExp("/search");
-//var searchres = searchfind.test(str);
-//var webfind = new RegExp(".com");
-//var webres = webfind.test(str);
-//Fallbacks
+var searchfind = new RegExp("/search");
+var searchres = searchfind.test(str);
+var webfind = new RegExp(".com");
+var webres = webfind.test(str);
+Fallbacks
 //Checks if it contains a website
-//	if(!(webres))
-//  {
- //   webfind = new RegExp(".net");
- //   var webres = webfind.test(str);
-//    if(!(webres))
-//      {
-//        webfind = new RegExp(".org");
-//        var webres = webfind.test(str);
-//      }
-//  }
+	if(!(webres))
+  {
+   webfind = new RegExp(".net");
+   var webres = webfind.test(str);
+    if(!(webres))
+      {
+        webfind = new RegExp(".org");
+        var webres = webfind.test(str);
+      }
+  }
 //Checks if it contains ai or Ai
-//  if(!(aires))
-//  {
-//     aifind = new RegExp("Ai");
-//     aires = aifind.test(str);
-//  }
+  if(!(aires))
+  {
+     aifind = new RegExp("Ai");
+     aires = aifind.test(str);
+  }
   //Checks all the Chills
   if(!(chillres))
     {
       chillfind = new RegExp("/Chill");
+      var chillres = chillfind.test(str);
+      if(!(chillres))
+        {
+          chillfind = new RegExp("/CHILL");
+          var chillres = chillfind.test(str);
+        }
+    }
+//Checks for Coin Flip
+  if(!(chillres))
+    {
+      chillfind = new RegExp("/flip");
       var chillres = chillfind.test(str);
       if(!(chillres))
         {
@@ -73,21 +88,21 @@ if(gifres && request.name != botName && !(webres))
   getGif(query);
 }
 //Checks for and initates Search
-//if(searchres && request.name != botName && !(webres))
-//{
-//    var query = str.substr(8);
-//    if(googleID != undefined)
-//    search(query);
-//}
+if(searchres && request.name != botName && !(webres))
+{
+    var query = str.substr(8);
+    if(googleID != undefined)
+    search(query);
+}
 //Checks for and initates ApiAi
-//if(aires)
-//  {
-//    var query = str.substr(3);
-//    query = query.replace(/\s/g, "+");
+if(aires)
+  {
+    var query = str.substr(3);
+    query = query.replace(/\s/g, "+");
     //Makes the query seperated by plus
-//    if(request.name != botName)
-//    if(aiClient != undefined)
-//    apiai(query);
+    if(request.name != botName)
+    if(aiClient != undefined)
+    apiai(query);
   }
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -115,7 +130,7 @@ if(gifres && request.name != botName && !(webres))
           postMessage(botResponse);
           this.res.end();
   }    
-        else if(request.text && flip.test(request.text)) {
+    /*    else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var theflip = 'Default Message';
@@ -173,7 +188,7 @@ if(gifres && request.name != botName && !(webres))
           var botResponse = theflip;
           postMessage(botResponse);
           this.res.end();
-  }	  
+  }	  */
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.random();
