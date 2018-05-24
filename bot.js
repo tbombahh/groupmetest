@@ -191,7 +191,7 @@ function respond()
 				"to be a GroupMe bot and be online and stuff \n" +
 				"you get to make money , sleep, and you light the 'puff' \n" +
 				"but I'm basically a servant, yeah my life is rough \n" +
-				"so read between the lines and yeah.. I don't know where I'm going with this.  I don't have an answer for you...;
+				"so read between the lines and yeah.. I don't know where I'm going with this.  I don't have an answer for you...";
 		} else if (r < 5 && r > 3){
 			magic = "4";
 		} else if (r < 4 && r > 0){
