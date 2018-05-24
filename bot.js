@@ -141,7 +141,7 @@ function respond()
 		var magic = "You can ask all you want.  It doesn't mean I'll answer";
 						
 		if (r < 100 && r > 95) {
-			magic = '"It is certain";
+			magic = "It is certain";
 		} else if (r < 96 && r > 91){
 			magic = "I have no clue and I would say ask the 9 ball, but 7 8 9";
 		} else if (r < 92 && r > 87){
