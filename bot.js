@@ -20,7 +20,7 @@ function respond()
 	help = /^\/help$/;
 	meball = /^\/8/;
 	yn = /^\/yn/;
-	flip = /^\flip$/;
+	flip = /^\/flip$/;
 	about = /^\/about$/;
 
 	var str = request.text;
