@@ -269,7 +269,7 @@ function search(query)
 	});
 }
 
-/Magic 8Ball Code
+//Magic 8Ball Code
 function eightBall()
 {
 	var r = Math.floor((Math.random() * 100) + 1);
