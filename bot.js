@@ -132,64 +132,64 @@ function respond()
 		this.res.end();
 	} else if(request.text && about.test(request.text)) {
 		this.res.writeHead(200);
-		var botResponse = "I've been created by Taylor with the help of the GitHub community.  I am version 3.0 and the last time I was update was on 5/24/18.  My new features are coin fli, 8ball, and yes/no."
+		var botResponse = "I've been created by TBomb with the help of the GitHub community.  I am version 3.0 and the last time I was updated was on 5/24/18.  My new features are coin flip, 8ball, and yes/no."
 		postMessage(botResponse);
 		this.res.end();
 	} else if(request.text && meball.test(request.text)) {
 		this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
-		var magic = 'Default Message';
+		var magic = "You can ask all you want.  It doesn't mean I'll answer";
 						
 		if (r < 100 && r > 95) {
-			magic = 'No';
+			magic = 'It is certain';
 		} else if (r < 96 && r > 91){
-			magic = 'maybe';
+			magic = 'Reply hazy, try again';
 		} else if (r < 92 && r > 87){
-			magic = '1';
+			magic = 'Ask again later';
 		} else if (r < 88 && r > 83){
-			magic = '2';
+			magic = "Don't count on it";
 		} else if (r < 84 && r > 79){
-			magic = '3';
+			magic = 'The stars say no';
 		} else if (r < 80 && r > 75){
-			magic = '4';
+			magic = 'You can count on it';
 		} else if (r < 76 && r > 71){
-			magic = '5';
+			magic = "I'd rather not say...";
 		} else if (r < 72 && r > 67){
-			magic = '6';
+			magic = 'Doubtful';
 		} else if (r < 68 && r > 63){
-			magic = '7';
+			magic = 'Try asking in a different way';
 		} else if (r < 64 && r > 59){
-			magic = '8';
+			magic = "That's a dumb question";
 		} else if (r < 60 && r > 55){
-			magic = '9';
+			magic = "If you have to ask, you'll never know";
 		} else if (r < 56 && r > 51){
-			magic = '0';
+			magic = 'Outlook not so good';
 		}  else if (r < 52 && r > 47){
-			magic = '22';
+			magic = 'Chances are slim';
 		} else if (r < 48 && r > 43){
-			magic = '33';
+			magic = 'Most likely';
 		} else if (r < 44 && r > 39){
-			magic = '11';
+			magic = 'Definitely';
 		} else if (r < 40 && r > 35){
-			magic = '44';
+			magic = "Not going to say 'yes' but it's looking like it";
 		} else if (r < 36 && r > 31){
-			magic = '55';
+			magic = "Not going to say 'no' but it's looking like it";
 		} else if (r < 32 && r > 27){
-			magic = '66';
+			magic = 'Probably';
 		} else if (r < 28 && r > 23){
-			magic = '77';
+			magic = 'Probably not';
 		} else if (r < 24 && r > 19){
-			magic = '88';
+			magic = 'Concentrate harder and ask again';
 		} else if (r < 20 && r > 15){
-			magic = '99';
+			magic = 'YEAH BABY!';
 		} else if (r < 16 && r > 11){
-			magic = '00';
+			magic = 'That adds no substance to the conversation';
 		} else if (r < 12 && r > 7){
-			magic = '111';
+			magic = 'Out fighting fires, ask me later';
 		} else if (r < 8 && r > 3){
-			magic = '123';
+			magic = '4';
 		} else if (r < 4 && r > 0){
-			magic = '333';
+			magic = 'This group was better when I was real';
 		} 
 		var botResponse = magic;
 		postMessage(botResponse);
