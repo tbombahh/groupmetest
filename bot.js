@@ -123,7 +123,7 @@ if(aires)
   }	  
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
-		var r = 1;
+		var r = 0;
 		var theflip = 'heads';
 		if (r < 0.5) {
 			theflip = 'tails';
