@@ -119,9 +119,9 @@ if(aires)
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var theflip = 'Go Fuck Yourself';
-		if (r < 100 && r > 50) {
+		if (r < 100 && r > 80) {
 			theflip = 'No';
-		} else if (r < 50 && r > 35){
+		} else if (r < 79 && r > 0){
 			theflip = 'maybe';
 		}
           var botResponse = theflip;
