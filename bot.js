@@ -16,7 +16,7 @@ function respond() {
       botRegex = /^\/cool guy$/;
       triggered = /^\/triggered$/;
       help = /^\/help$/;
-      flip = /^\/flip$/;
+      flip = /^\/flip$/ + var str;
       yn = /^\/yn$/;
 
 var str = request.text;
@@ -115,10 +115,10 @@ if(aires)
           postMessage(botResponse);
           this.res.end();
   }    
-        else if(request.text.startsWith("/flip")) {
+        else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
-		var theflip = 'Go Fuck Yourself';
+		var theflip = 'Default Message';
 		if (r < 100 && r > 95) {
 			theflip = 'No';
 		} else if (r < 96 && r > 91){
