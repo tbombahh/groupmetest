@@ -36,12 +36,12 @@ var searchfind = new RegExp("/search");
 var searchres = searchfind.test(str);
 var webfind = new RegExp(".com");
 var webres = webfind.test(str);
-Fallbacks
+//Fallbacks
 //Checks if it contains a website
 	if(!(webres))
   {
-   webfind = new RegExp(".net");
-   var webres = webfind.test(str);
+    webfind = new RegExp(".net");
+    var webres = webfind.test(str);
     if(!(webres))
       {
         webfind = new RegExp(".org");
@@ -57,15 +57,14 @@ Fallbacks
   //Checks all the Chills
   if(!(chillres))
     {
-      chillfind = new RegExp("/flip");
+      chillfind = new RegExp("/Chill");
       var chillres = chillfind.test(str);
       if(!(chillres))
         {
-          chillfind = new RegExp("/FLIP");
+          chillfind = new RegExp("/CHILL");
           var chillres = chillfind.test(str);
         }
     }
-
 //End of fallbacks
 //Checks for and initates Gif
 if(gifres && request.name != botName && !(webres))
@@ -116,7 +115,7 @@ if(aires)
           postMessage(botResponse);
           this.res.end();
   }    
-          else if(request.text && flip.test(request.text)) {
+        else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var theflip = 'Default Message';
@@ -228,7 +227,6 @@ var options={
 //**************************************************************************
 /*Flips coin
 function flipcoin() {
-
   var r = Math.random();
   var botResponse = 'heads';
   if (r < 0.5) {
