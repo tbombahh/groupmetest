@@ -1,6 +1,7 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var giphy = require('giphy-api')();
+var r = Math.random();
 
 var botID = process.env.BOT_ID;
 var botName = process.env.BOT_NAME;
@@ -110,33 +111,27 @@ if(aires)
             this.res.end();
     }   else if(request.text && help.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try typing this: '/g btiches' and see what I'll see what I can do for ya!  Type '/pokemon' to learn how to play!"; 
+          var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try typing this: '/g btiches' and see what I'll see what I can do for ya!  Type '/pokemon' to learn how to play!" 
           postMessage(botResponse);
           this.res.end();
   }    
         else if(request.text && flip.test(request.text)) {
           this.res.writeHead(200);
-          var botResponse = "FLIPPING A COIN! Good luck!"; 
+          var botResponse = "FLIPPING A COIN! Good luck!"
           postMessage(botResponse);
           this.res.end();
   }	  
         else if(request.text && yn.test(request.text)) {
           this.res.writeHead(200);
-	  function flippingcoin() {
-		var r = Math.random();
+		//var r = Math.random();
 		var theflip = 'heads';
-		if (r < 0.5) {
-			theflip = 'tails';
-		}
+		//if (r < 0.5) {
+			//theflip = 'tails';
+		//}
           var botResponse = theflip ;
           postMessage(botResponse);
           this.res.end();	
-		
-//////////
-		
-			//////////
-			
-		
+	
 		  
   }    else { console.log("don't care");
     this.res.writeHead(200);
