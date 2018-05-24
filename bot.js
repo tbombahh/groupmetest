@@ -18,8 +18,9 @@ function respond()
 	botRegex = /^\/cool guy$/;
 	triggered = /^\/triggered$/;
 	help = /^\/help$/;
-	meball = /^\/8ball/;
+	meball = /^\/8/;
 	yn = /^\/yn/;
+	flip = /^\flip$/;
 	about = /^\/about$/;
 
 	var str = request.text;
@@ -120,7 +121,9 @@ function respond()
 		var botResponse = "https://i.groupme.com/245x292.gif.ca41bed2aaef478b886e0660730c80b2.large";
 		postMessage(botResponse);
 		this.res.end();
-	} else if(request.text && help.test(request.text)) {
+	} 
+	  //Help Text Section
+	  else if(request.text && help.test(request.text)) {
 		this.res.writeHead(200);
 		var botResponse = "Here's what I can do: \n \n" + 
 		    "1. I'm a Meme Finder.  Type '/g' before your search term and I'll return a related .gif from the internet! \n \n" +
@@ -130,12 +133,16 @@ function respond()
 		    "Let Me know if there is anything else you want me to do :)"
 		postMessage(botResponse);
 		this.res.end();
-	} else if(request.text && about.test(request.text)) {
+	} 
+	  //About Me Text Section
+	  else if(request.text && about.test(request.text)) {
 		this.res.writeHead(200);
 		var botResponse = "I've been created by TBomb with the help of the GitHub community.  I am version 3.0 and the last time I was updated was on 5/24/18.  My new features are coin flip, 8ball, and yes/no."
 		postMessage(botResponse);
 		this.res.end();
-	} else if(request.text && meball.test(request.text)) {
+	} 
+	  //Magic 8 Ball Code
+	  else if(request.text && meball.test(request.text)) {
 		this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
 		var magic = "You can ask all you want.  It doesn't mean I'll answer";
@@ -181,7 +188,7 @@ function respond()
 		} else if (r < 24 && r > 19){
 			magic = "Concentrate harder and ask again";
 		} else if (r < 20 && r > 15){
-			magic = "Here's my Austin Power's impression: hehe yeah... YEAH BABY! yeah";
+			magic = "Hehe yeah... YEAH BABY! yeah";
 		} else if (r < 16 && r > 11){
 			magic = "That adds no substance to the conversation";
 		} else if (r < 12 && r > 7){
@@ -201,12 +208,27 @@ function respond()
 		postMessage(botResponse);
 		this.res.end();
 					
-	} else if(request.text && yn.test(request.text)) {
+	} 
+	  //Yes or No Answer Section
+	  else if(request.text && yn.test(request.text)) {
 		this.res.writeHead(200);
 		var r = Math.random();
 		var theflip = 'Yes';
 		if (r < 0.5) {
 			theflip = 'No';
+		}
+		var botResponse = theflip ;
+		postMessage(botResponse);
+		this.res.end();	
+	
+	}  
+	  //Coin Flip Section
+	  else if(request.text && flip.test(request.text)) {
+		this.res.writeHead(200);
+		var r = Math.random();
+		var theflip = 'Heads';
+		if (r < 0.5) {
+			theflip = 'Tails';
 		}
 		var botResponse = theflip ;
 		postMessage(botResponse);
