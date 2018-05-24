@@ -18,7 +18,7 @@ function respond()
 	botRegex = /^\/cool guy$/;
 	triggered = /^\/triggered$/;
 	help = /^\/help$/;
-	flip = /^\/flip$/;
+	meball = /^\/8ball$/;
 	yn = /^\/yn/;
 
 	var str = request.text;
@@ -124,63 +124,63 @@ function respond()
 		var botResponse = "Sup?  I'm Sean 2.0.  Here's what I can do:  1. I'm a meme finder. Type '/g' after or before your search term and I'll return a related meme at random for you ;).  Try typing this: '/g btiches' and see what I'll see what I can do for ya!  Type '/pokemon' to learn how to play!" 
 		postMessage(botResponse);
 		this.res.end();
-	} else if(request.text && flip.test(request.text)) {
+	} else if(request.text && meball.test(request.text)) {
 		this.res.writeHead(200);
 		var r = Math.floor((Math.random() * 100) + 1);
-		var theflip = 'Default Message';
+		var magic = 'Default Message';
 						
 		if (r < 100 && r > 95) {
-			theflip = 'No';
+			magic = 'No';
 		} else if (r < 96 && r > 91){
-			theflip = 'maybe';
+			magic = 'maybe';
 		} else if (r < 92 && r > 87){
-			theflip = '1';
+			magic = '1';
 		} else if (r < 88 && r > 83){
-			theflip = '2';
+			magic = '2';
 		} else if (r < 84 && r > 79){
-			theflip = '3';
+			magic = '3';
 		} else if (r < 80 && r > 75){
-			theflip = '4';
+			magic = '4';
 		} else if (r < 76 && r > 71){
-			theflip = '5';
+			magic = '5';
 		} else if (r < 72 && r > 67){
-			theflip = '6';
+			magic = '6';
 		} else if (r < 68 && r > 63){
-			theflip = '7';
+			magic = '7';
 		} else if (r < 64 && r > 59){
-			theflip = '8';
+			magic = '8';
 		} else if (r < 60 && r > 55){
-			theflip = '9';
+			magic = '9';
 		} else if (r < 56 && r > 51){
-			theflip = '0';
+			magic = '0';
 		}  else if (r < 52 && r > 47){
-			theflip = '22';
+			magic = '22';
 		} else if (r < 48 && r > 43){
-			theflip = '33';
+			magic = '33';
 		} else if (r < 44 && r > 39){
-			theflip = '11';
+			magic = '11';
 		} else if (r < 40 && r > 35){
-			theflip = '44';
+			magic = '44';
 		} else if (r < 36 && r > 31){
-			theflip = '55';
+			magic = '55';
 		} else if (r < 32 && r > 27){
-			theflip = '66';
+			magic = '66';
 		} else if (r < 28 && r > 23){
-			theflip = '77';
+			magic = '77';
 		} else if (r < 24 && r > 19){
-			theflip = '88';
+			magic = '88';
 		} else if (r < 20 && r > 15){
-			theflip = '99';
+			magic = '99';
 		} else if (r < 16 && r > 11){
-			theflip = '00';
+			magic = '00';
 		} else if (r < 12 && r > 7){
-			theflip = '111';
+			magic = '111';
 		} else if (r < 8 && r > 3){
-			theflip = '123';
+			magic = '123';
 		} else if (r < 4 && r > 0){
-			theflip = '333';
+			magic = '333';
 		} 
-		var botResponse = theflip;
+		var botResponse = magic;
 		postMessage(botResponse);
 		this.res.end();
 					
