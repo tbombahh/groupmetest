@@ -137,8 +137,7 @@ function respond()
 	  //About Me Text Section
 	  else if(request.text && about.test(request.text)) {
 		this.res.writeHead(200);
-		var botResponse = "I've been created by TBomb with the help of the GitHub community.  I am version 3.0 and the last time I was updated was on 5/24/18.  My new features are coin flip, 8ball, and yes/no."
-		postMessage(botResponse);
+		aboutMe();
 		this.res.end();
 	} 
 	  //Magic 8 Ball Code
@@ -262,6 +261,17 @@ function search(query)
 		console.log('Error: ' +e);
 	});
 }
+
+//About Me Code
+function aboutMe()
+{
+	var botResponse = "I've been created by TBomb with the help of the GitHub community.  " +
+			"I am version 3.0 and the last time I was updated was on 5/24/18.  " +
+	    		"My new features are coin flip, 8ball, and yes/no."
+	postMessage(botResponse);
+}
+
+
 
 //Play with Magic 8Ball
 function eightBall()
