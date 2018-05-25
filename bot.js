@@ -201,18 +201,6 @@ function apiai(query)
 	});
 }
 
-//**************************************************************************
-/*Flips coin
-function flipcoin() {
-  var r = Math.random();
-  var botResponse = 'heads';
-  if (r < 0.5) {
-    botResponse = 'tails';
-    postMessage(botResponse);  
-}
-*/
-//*************************************************************************
-
 //Sends to Giphy to get Gif
 function getGif(query)
 {
@@ -272,8 +260,8 @@ function helpMe()
 function aboutMe()
 {
 	var botResponse = "I've been created by TBomb with the help of the GitHub community.  " +
-			"I am version 3.0 and the last time I was updated was on 5/24/18.  " +
-	    		"My new features are coin flip, 8ball, and yes/no."
+			"I am version 3.0.1 and the last time I was updated was on 5/25/18.  " +
+	    		"Release details are: cleaned up code."
 	postMessage(botResponse);
 }
 
