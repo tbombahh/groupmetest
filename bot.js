@@ -125,13 +125,7 @@ function respond()
 	  //Help Text Section
 	  else if(request.text && help.test(request.text)) {
 		this.res.writeHead(200);
-		var botResponse = "Here's what I can do: \n \n" + 
-		    "1. I'm a Meme Finder.  Type '/g' before your search term and I'll return a related .gif from the internet! \n \n" +
-		    "2. I'm a Yes/No-er.  Type '/yn' before your search term and I'll return a Yes or No to your question! \n \n" +
-		    "3. I'm a Coin Flipper.  Type '/flip' to flip a coin! \n \n" +
-		    "4. I'm a Magic 8 Ball.  Type '/8' to get your fortune! \n \n" +
-		    "Let Me know if there is anything else you want me to do :)"
-		postMessage(botResponse);
+		helpMe();
 		this.res.end();
 	} 
 	  //About Me Text Section
@@ -262,7 +256,19 @@ function search(query)
 	});
 }
 
-//About Me Code
+//Help Function Code 
+function helpMe()
+{
+	var botResponse = "Here's what I can do: \n \n" + 
+	"1. I'm a Meme Finder.  Type '/g' before your search term and I'll return a related .gif from the internet! \n \n" +
+	"2. I'm a Yes/No-er.  Type '/yn' before your search term and I'll return a Yes or No to your question! \n \n" +
+	"3. I'm a Coin Flipper.  Type '/flip' to flip a coin! \n \n" +
+	"4. I'm a Magic 8 Ball.  Type '/8' to get your fortune! \n \n" +
+	"Let Me know if there is anything else you want me to do :)"
+	postMessage(botResponse);
+}
+
+//About Me  Function Code
 function aboutMe()
 {
 	var botResponse = "I've been created by TBomb with the help of the GitHub community.  " +
