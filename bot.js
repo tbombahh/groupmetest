@@ -365,11 +365,11 @@ function pickName()
 	} 
 	// Splitting responses so the ending isnt always the same for each person.
 	var rr = Math.floor((Math.random() * 100) + 1);
-	var ending = "is my vote";
+	var ending = " ";
 	if (rr < 100 && rr > 94) {
-		ending = "= my choice";
+		ending = " ";
 	} else if (rr < 95 && rr > 89){
-		ending = "is my choice";
+		ending = " ";
 	} else if (rr < 90 && rr > 84){
 		ending = "is what my crystal BALLS say!";
 	} else if (rr < 85 && rr > 79){
@@ -379,27 +379,27 @@ function pickName()
 	} else if (rr < 75 && rr > 69){
 		ending = "of course";
 	} else if (rr < 70 && rr > 64){
-		ending = "gets my vote";
+		ending = " ";
 	} else if (rr < 65 && rr > 59){
 		ending = "all the way!";
 	} else if (rr < 60 && rr > 54){
-		ending = "is in the cards";
+		ending = " ";
 	} else if (rr < 55 && rr > 44){
 		ending = "or " + magic2;
 	} else if (rr < 45 && rr > 39){
-		ending = magic + " " + magic + "!";
+		ending = magic + "! " + magic + "!";
 	} else if (rr < 40 && rr > 34){
-		ending = "is number 1";
+		ending = " ";
 	}  else if (rr < 35 && rr > 29){
-		ending = "is not right";
+		ending = " ";
 	} else if (rr < 30 && rr > 24){
-		ending = "deserves it";
+		ending = " .... regrettably ";
 	} else if (rr < 25 && rr > 19){
-		ending = "shouldn't be considered";
+		ending = " ";
 	} else if (rr < 20 && rr > 14){
 		ending = "without a doubt";
 	} else if (rr < 15 && rr > 9){
-		ending = " but not " +magic2;
+		ending = " but definitely not " +magic2;
 	} else if (rr < 10 && rr > 4){
 		ending = " ";
 	} 
