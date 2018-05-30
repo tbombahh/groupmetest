@@ -325,7 +325,7 @@ function pickName()
 	
 	//This is rolling for a 2nd name in case it gets used in a response
 	var r2 = Math.floor((Math.random() * 100) + 1);
-	var magic2 = "else";				
+	var magic2 = "really anyone else";				
 	if (r2 < 100 && r2 > 94) {
 		magic2 = "Joe";
 	} else if (r2 < 95 && r2 > 89){
