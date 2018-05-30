@@ -280,7 +280,7 @@ function aboutMe()
 function pickName()
 {
 	var r = Math.floor((Math.random() * 100) + 1);
-	var magic = "No one";				
+	var magic = "4";				
 	if (r < 100 && r > 94) {
 		magic = "Joe";
 	} else if (r < 95 && r > 89){
@@ -310,7 +310,7 @@ function pickName()
 	} else if (r < 35 && r > 29){
 		magic = "Nick";
 	} else if (r < 30 && r > 24){
-		magic = "Me!";
+		magic = "Me";
 	} else if (r < 25 && r > 19){
 		magic = "Romano";
 	} else if (r < 20 && r > 14){
@@ -325,7 +325,7 @@ function pickName()
 	
 	//This is rolling for a 2nd name in case it gets used in a response
 	var r2 = Math.floor((Math.random() * 100) + 1);
-	var magic2 = "really anyone else";				
+	var magic2 = "anyone else";				
 	if (r2 < 100 && r2 > 94) {
 		magic2 = "Joe";
 	} else if (r2 < 95 && r2 > 89){
@@ -522,4 +522,3 @@ function postMessage(botResponse)
 
 
 exports.respond = respond;
-2
