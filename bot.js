@@ -20,6 +20,7 @@ function respond()
 	help = /^\/help$/;
 	meball = /^\/8/;
 	yn = /^\/yn/;
+	member = /^\/name/;
 	flip = /^\/flip$/;
 	about = /^\/about$/;
 
@@ -154,6 +155,13 @@ function respond()
 		this.res.end();	
 	
 	}  
+	//Random Name Section
+	  else if(request.text && member.test(request.text)) {
+		  this.res.writeHead(200);
+		  pickName();
+		  this.res.end();
+	
+	}  
 	  //Coin Flip Section
 	  else if(request.text && flip.test(request.text)) {
 		this.res.writeHead(200);
@@ -267,11 +275,141 @@ function aboutMe()
 
 
 
+//*****************************************************************
+//Pick a Random Name
+function pickName()
+{
+	var r = Math.floor((Math.random() * 100) + 1);
+	var magic = "You can ask all you want.  It doesn't mean I'll answer.  Try again though ;)";				
+	if (r < 100 && r > 95) {
+		magic = "Joe";
+	} else if (r < 96 && r > 91){
+		magic = "Bryant";
+	} else if (r < 92 && r > 87){
+		magic = "Justin";
+	} else if (r < 88 && r > 83){
+		magic = "Kryger";
+	} else if (r < 84 && r > 79){
+		magic = "Dylan";
+	} else if (r < 80 && r > 75){
+		magic = "Ryan";
+	} else if (r < 76 && r > 71){
+		magic = "Connor";
+	} else if (r < 72 && r > 67){
+		magic = "Jimmy";
+	} else if (r < 68 && r > 63){
+		magic = "Gruber";
+	} else if (r < 64 && r > 59){
+		magic = "Richie";
+	} else if (r < 60 && r > 55){
+		magic = "Maloney";
+	} else if (r < 56 && r > 51){
+		magic = "Taylor";
+	}  else if (r < 52 && r > 47){
+		magic = "Me!";
+	} else if (r < 48 && r > 43){
+		magic = "Nick";
+	} else if (r < 44 && r > 39){
+		magic = "Jason";
+	} else if (r < 40 && r > 35){
+		magic = "Romano";
+	} else if (r < 36 && r > 31){
+		magic = "Corby";
+	} else if (r < 32 && r > 27){
+		magic = "Vinny";
+	} 
+	
+	//This is rolling for a 2nd name in case it gets used in a response
+	var r2 = Math.floor((Math.random() * 100) + 1);
+	var magic2 = "else";				
+	if (r2 < 100 && r2 > 95) {
+		magic2 = "Joe";
+	} else if (r2 < 96 && r2 > 91){
+		magic2 = "Bryant";
+	} else if (r2 < 92 && r2 > 87){
+		magic2 = "Justin";
+	} else if (r2 < 88 && r2 > 83){
+		magic2 = "Kryger";
+	} else if (r2 < 84 && r2 > 79){
+		magic2 = "Dylan";
+	} else if (r2 < 80 && r2 > 75){
+		magic2 = "Ryan";
+	} else if (r2 < 76 && r2 > 71){
+		magic2 = "Connor";
+	} else if (r2 < 72 && r2 > 67){
+		magic2 = "Jimmy";
+	} else if (r2 < 68 && r2 > 63){
+		magic2 = "Gruber";
+	} else if (r2 < 64 && r2 > 59){
+		magic2 = "Richie";
+	} else if (r2 < 60 && r2 > 55){
+		magic2 = "Maloney";
+	} else if (r2 < 56 && r2 > 51){
+		magic2 = "Taylor";
+	}  else if (r2 < 52 && r2 > 47){
+		magic2 = "Me!";
+	} else if (r2 < 48 && r2 > 43){
+		magic2 = "Nick";
+	} else if (r2 < 44 && r2 > 39){
+		magic2 = "Jason";
+	} else if (r2 < 40 && r2 > 35){
+		magic2 = "Romano";
+	} else if (r2 < 36 && r2 > 31){
+		magic2 = "Corby";
+	} else if (r2 < 32 && r2 > 27){
+		magic2 = "Vinny";
+	} 
+	// Splitting responses so the ending isnt always the same for each person.
+	var rr = Math.floor((Math.random() * 100) + 1);
+	var ending = "is my vote";
+	if (rr < 100 && rr > 95) {
+		ending = "is my vote";
+	} else if (rr < 96 && rr > 91){
+		ending = "is my guess";
+	} else if (rr < 92 && rr > 87){
+		ending = "is what my crystal BALLS say!";
+	} else if (rr < 88 && rr > 83){
+		ending = "probably";
+	} else if (rr < 84 && rr > 79){
+		ending = "definitely";
+	} else if (rr < 80 && rr > 75){
+		ending = "fo sho";
+	} else if (rr < 76 && rr > 71){
+		ending = "allllll the wayyy";
+	} else if (rr < 72 && rr > 67){
+		ending = "is my choice";
+	} else if (rr < 68 && rr > 63){
+		ending = "is the one";
+	} else if (rr < 64 && rr > 59){
+		ending = "is who I'm pointing at";
+	} else if (rr < 60 && rr > 55){
+		ending = "took the cookie from the cookie jar";
+	} else if (rr < 56 && rr > 51){
+		ending = "is guilty";
+	}  else if (rr < 52 && rr > 47){
+		ending = "";
+	} else if (rr < 48 && rr > 43){
+		ending = "obviously";
+	} else if (rr < 44 && rr > 39){
+		ending = "or " + magic2;
+	} else if (rr < 40 && rr > 35){
+		ending = "is the wrong choice";
+	} else if (rr < 36 && rr > 31){
+		ending = " ";
+	} else if (rr < 32 && rr > 27){
+		ending = magic + " " + magic + "!";
+	} 
+	
+	var botResponse = magic + " " + ending;
+	postMessage(botResponse);
+}
+
+
 //Play with Magic 8Ball
 function eightBall()
 {
 	var r = Math.floor((Math.random() * 100) + 1);
-	var magic = "You can ask all you want.  It doesn't mean I'll answer";
+	var magic = "You can ask all you want.  It doesn't mean I'll answer.  Try again though ;)";
 					
 	if (r < 100 && r > 95) {
 		magic = "It is certain";
@@ -316,18 +454,18 @@ function eightBall()
 	} else if (r < 20 && r > 15){
 		magic = "Hehe yeah... YEAH BABY! yeah";
 	} else if (r < 16 && r > 11){
-		magic = "That adds no substance to the conversation";
+		magic = "Can you try asking again?";
 	} else if (r < 12 && r > 7){
 		magic = "Out fighting fires, ask me later";
-	} else if (r < 8 && r > 4){
+	} else if (r < 8 && r > 5){
 		magic = "Ima answer all your questions given time its tough \n" +
 			"to be a GroupMe bot and be online and stuff \n" +
 			"you get to make money , sleep, and you light the 'puff' \n" +
 			"but I'm basically a servant, yeah my life is rough \n" +
 			"so read between the lines and yeah.. I don't know where I'm going with this.  I don't have an answer for you...";
-	} else if (r < 5 && r > 3){
+	} else if (r < 6 && r > 2){
 		magic = "4";
-	} else if (r < 4 && r > 0){
+	} else if (r < 3 && r > 0){
 		magic = "This group was better when I was real";
 	} 
 	var botResponse = magic;
