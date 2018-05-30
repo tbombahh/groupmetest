@@ -280,43 +280,47 @@ function aboutMe()
 function pickName()
 {
 	var r = Math.floor((Math.random() * 100) + 1);
-	var magic = "You can ask all you want.  It doesn't mean I'll answer.  Try again though ;)";				
-	if (r < 100 && r > 95) {
+	var magic = "No one";				
+	if (r < 100 && r > 94) {
 		magic = "Joe";
-	} else if (r < 96 && r > 91){
+	} else if (r < 95 && r > 89){
 		magic = "Bryant";
-	} else if (r < 92 && r > 87){
+	} else if (r < 90 && r > 84){
 		magic = "Justin";
-	} else if (r < 88 && r > 83){
+	} else if (r < 85 && r > 79){
 		magic = "Kryger";
-	} else if (r < 84 && r > 79){
+	} else if (r < 80 && r > 74){
 		magic = "Dylan";
-	} else if (r < 80 && r > 75){
+	} else if (r < 75 && r > 69){
 		magic = "Ryan";
-	} else if (r < 76 && r > 71){
+	} else if (r < 70 && r > 64){
 		magic = "Connor";
-	} else if (r < 72 && r > 67){
+	} else if (r < 65 && r > 59){
 		magic = "Jimmy";
-	} else if (r < 68 && r > 63){
+	} else if (r < 60 && r > 54){
 		magic = "Gruber";
-	} else if (r < 64 && r > 59){
+	} else if (r < 55 && r > 49){
 		magic = "Richie";
-	} else if (r < 60 && r > 55){
+	} else if (r < 50 && r > 44){
 		magic = "Maloney";
-	} else if (r < 56 && r > 51){
+	} else if (r < 45 && r > 39){
 		magic = "Taylor";
-	}  else if (r < 52 && r > 47){
-		magic = "Me!";
-	} else if (r < 48 && r > 43){
-		magic = "Nick";
-	} else if (r < 44 && r > 39){
+	} else if (r < 40 && r > 34){
 		magic = "Jason";
-	} else if (r < 40 && r > 35){
+	} else if (r < 35 && r > 29){
+		magic = "Nick";
+	} else if (r < 30 && r > 24){
+		magic = "Me!";
+	} else if (r < 25 && r > 19){
 		magic = "Romano";
-	} else if (r < 36 && r > 31){
+	} else if (r < 20 && r > 14){
 		magic = "Corby";
-	} else if (r < 32 && r > 27){
+	} else if (r < 15 && r > 9){
 		magic = "Vinny";
+	} else if (r < 10 && r > 4){
+		magic = "No one";
+	} else if (r < 5 && r > 0){
+		magic = "Everyone";
 	} 
 	
 	//This is rolling for a 2nd name in case it gets used in a response
@@ -411,9 +415,9 @@ function eightBall()
 	var r = Math.floor((Math.random() * 100) + 1);
 	var magic = "You can ask all you want.  It doesn't mean I'll answer.  Try again though ;)";
 					
-	if (r < 100 && r > 95) {
+	if (r < 100 && r > 92) {
 		magic = "It is certain";
-	} else if (r < 96 && r > 91){
+	} else if (r < 93 && r > 9){
 		magic = "I have no clue and I would say ask the 9 ball, but 7 8 9";
 	} else if (r < 92 && r > 87){
 		magic = "Ask again later";
@@ -518,3 +522,4 @@ function postMessage(botResponse)
 
 
 exports.respond = respond;
+2
