@@ -326,82 +326,82 @@ function pickName()
 	//This is rolling for a 2nd name in case it gets used in a response
 	var r2 = Math.floor((Math.random() * 100) + 1);
 	var magic2 = "else";				
-	if (r2 < 100 && r2 > 95) {
+	if (r2 < 100 && r2 > 94) {
 		magic2 = "Joe";
-	} else if (r2 < 96 && r2 > 91){
+	} else if (r2 < 95 && r2 > 89){
 		magic2 = "Bryant";
-	} else if (r2 < 92 && r2 > 87){
+	} else if (r2 < 90 && r2 > 84){
 		magic2 = "Justin";
-	} else if (r2 < 88 && r2 > 83){
+	} else if (r2 < 85 && r2 > 79){
 		magic2 = "Kryger";
-	} else if (r2 < 84 && r2 > 79){
+	} else if (r2 < 80 && r2 > 74){
 		magic2 = "Dylan";
-	} else if (r2 < 80 && r2 > 75){
+	} else if (r2 < 75 && r2 > 69){
 		magic2 = "Ryan";
-	} else if (r2 < 76 && r2 > 71){
+	} else if (r2 < 70 && r2 > 64){
 		magic2 = "Connor";
-	} else if (r2 < 72 && r2 > 67){
+	} else if (r2 < 65 && r2 > 59){
 		magic2 = "Jimmy";
-	} else if (r2 < 68 && r2 > 63){
+	} else if (r2 < 60 && r2 > 54){
 		magic2 = "Gruber";
-	} else if (r2 < 64 && r2 > 59){
+	} else if (r2 < 55 && r2 > 49){
 		magic2 = "Richie";
-	} else if (r2 < 60 && r2 > 55){
+	} else if (r2 < 50 && r2 > 44){
 		magic2 = "Maloney";
-	} else if (r2 < 56 && r2 > 51){
+	} else if (r2 < 45 && r2 > 39){
 		magic2 = "Taylor";
-	}  else if (r2 < 52 && r2 > 47){
+	}  else if (r2 < 40 && r2 > 34){
 		magic2 = "Me!";
-	} else if (r2 < 48 && r2 > 43){
+	} else if (r2 < 35 && r2 > 29){
 		magic2 = "Nick";
-	} else if (r2 < 44 && r2 > 39){
+	} else if (r2 < 30 && r2 > 24){
 		magic2 = "Jason";
-	} else if (r2 < 40 && r2 > 35){
+	} else if (r2 < 25 && r2 > 19){
 		magic2 = "Romano";
-	} else if (r2 < 36 && r2 > 31){
+	} else if (r2 < 20 && r2 > 14){
 		magic2 = "Corby";
-	} else if (r2 < 32 && r2 > 27){
+	} else if (r2 < 15 && r2 > 9){
 		magic2 = "Vinny";
 	} 
 	// Splitting responses so the ending isnt always the same for each person.
 	var rr = Math.floor((Math.random() * 100) + 1);
 	var ending = "is my vote";
-	if (rr < 100 && rr > 95) {
-		ending = "is my vote";
-	} else if (rr < 96 && rr > 91){
-		ending = "is my guess";
-	} else if (rr < 92 && rr > 87){
-		ending = "is what my crystal BALLS say!";
-	} else if (rr < 88 && rr > 83){
-		ending = "probably";
-	} else if (rr < 84 && rr > 79){
-		ending = "definitely";
-	} else if (rr < 80 && rr > 75){
-		ending = "fo sho";
-	} else if (rr < 76 && rr > 71){
-		ending = "allllll the wayyy";
-	} else if (rr < 72 && rr > 67){
-		ending = "is my choice";
-	} else if (rr < 68 && rr > 63){
-		ending = "is the one";
-	} else if (rr < 64 && rr > 59){
-		ending = "is who I'm pointing at";
-	} else if (rr < 60 && rr > 55){
-		ending = "took the cookie from the cookie jar";
-	} else if (rr < 56 && rr > 51){
-		ending = "is guilty";
-	}  else if (rr < 52 && rr > 47){
-		ending = "";
-	} else if (rr < 48 && rr > 43){
-		ending = "obviously";
-	} else if (rr < 44 && rr > 39){
-		ending = "or " + magic2;
-	} else if (rr < 40 && rr > 35){
-		ending = "is the wrong choice";
-	} else if (rr < 36 && rr > 31){
-		ending = " ";
-	} else if (rr < 32 && rr > 27){
-		ending = magic + " " + magic + "!";
+	if (rr < 100 && rr > 94) {
+		rr = "= my choice";
+	} else if (rr < 95 && rr > 89){
+		rr = "is my choice";
+	} else if (rr < 90 && rr > 84){
+		rr = "is what my crystal BALLS say!";
+	} else if (rr < 85 && rr > 79){
+		rr = "fo sho";
+	} else if (rr < 80 && rr > 74){
+		rr = " ...duh! ";
+	} else if (rr < 75 && rr > 69){
+		rr = "of course";
+	} else if (rr < 70 && rr > 64){
+		rr = "gets my vote";
+	} else if (rr < 65 && rr > 59){
+		rr = "all the way!";
+	} else if (rr < 60 && rr > 54){
+		rr = "is in the cards";
+	} else if (rr < 55 && rr > 49){
+		rr = "or " + magic2;
+	} else if (rr < 50 && rr > 44){
+		rr = magic + " " + magic + "!";
+	} else if (rr < 45 && rr > 39){
+		rr = "is number 1";
+	}  else if (rr < 40 && rr > 34){
+		rr = "is not right";
+	} else if (rr < 35 && rr > 29){
+		rr = "deserves it";
+	} else if (rr < 30 && rr > 24){
+		rr = "shouldn't be considered";
+	} else if (rr < 25 && rr > 19){
+		rr = "without a doubt";
+	} else if (rr < 20 && rr > 14){
+		rr = " but not " +magic2;
+	} else if (rr < 15 && rr > 4){
+		rr = " ";
 	} 
 	
 	var botResponse = magic + " " + ending;
