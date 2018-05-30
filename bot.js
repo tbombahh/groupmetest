@@ -367,41 +367,41 @@ function pickName()
 	var rr = Math.floor((Math.random() * 100) + 1);
 	var ending = "is my vote";
 	if (rr < 100 && rr > 94) {
-		rr = "= my choice";
+		ending = "= my choice";
 	} else if (rr < 95 && rr > 89){
-		rr = "is my choice";
+		ending = "is my choice";
 	} else if (rr < 90 && rr > 84){
-		rr = "is what my crystal BALLS say!";
+		ending = "is what my crystal BALLS say!";
 	} else if (rr < 85 && rr > 79){
-		rr = "fo sho";
+		ending = "fo sho";
 	} else if (rr < 80 && rr > 74){
-		rr = " ...duh! ";
+		ending = " ...duh! ";
 	} else if (rr < 75 && rr > 69){
-		rr = "of course";
+		ending = "of course";
 	} else if (rr < 70 && rr > 64){
-		rr = "gets my vote";
+		ending = "gets my vote";
 	} else if (rr < 65 && rr > 59){
-		rr = "all the way!";
+		ending = "all the way!";
 	} else if (rr < 60 && rr > 54){
-		rr = "is in the cards";
-	} else if (rr < 55 && rr > 49){
-		rr = "or " + magic2;
-	} else if (rr < 50 && rr > 44){
-		rr = magic + " " + magic + "!";
+		ending = "is in the cards";
+	} else if (rr < 55 && rr > 44){
+		ending = "or " + magic2;
 	} else if (rr < 45 && rr > 39){
-		rr = "is number 1";
-	}  else if (rr < 40 && rr > 34){
-		rr = "is not right";
-	} else if (rr < 35 && rr > 29){
-		rr = "deserves it";
+		ending = magic + " " + magic + "!";
+	} else if (rr < 40 && rr > 34){
+		ending = "is number 1";
+	}  else if (rr < 35 && rr > 29){
+		ending = "is not right";
 	} else if (rr < 30 && rr > 24){
-		rr = "shouldn't be considered";
+		ending = "deserves it";
 	} else if (rr < 25 && rr > 19){
-		rr = "without a doubt";
+		ending = "shouldn't be considered";
 	} else if (rr < 20 && rr > 14){
-		rr = " but not " +magic2;
-	} else if (rr < 15 && rr > 4){
-		rr = " ";
+		ending = "without a doubt";
+	} else if (rr < 15 && rr > 9){
+		ending = " but not " +magic2;
+	} else if (rr < 10 && rr > 4){
+		ending = " ";
 	} 
 	
 	var botResponse = magic + " " + ending;
